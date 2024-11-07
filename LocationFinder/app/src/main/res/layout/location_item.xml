@@ -1,0 +1,65 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/border_background"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- TextViews for Address, Latitude, and Longitude -->
+    <TextView
+        android:id="@+id/locationAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/locationLatitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationAddress" />
+
+    <TextView
+        android:id="@+id/locationLongitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationLatitude" />
+
+    <!-- Buttons (Delete and Open Map) -->
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintTop_toBottomOf="@id/locationLongitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/buttonOpenMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View in Maps"
+        app:layout_constraintBottom_toBottomOf="@id/deleteButton"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
