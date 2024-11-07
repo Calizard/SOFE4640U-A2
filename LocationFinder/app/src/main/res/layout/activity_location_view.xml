@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EBC0C0"
+    android:background="#84D0C4"
     android:textAlignment="center"
     tools:context=".LocationView">
 
@@ -14,9 +14,8 @@
         android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#818DCE"
         android:minHeight="?attr/actionBarSize"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:gravity="start|top"
-            android:hint="Address"
+            android:hint="Enter address. Ex. Ontario TechU"
             android:inputType="textMultiLine"
             android:maxLines="5"
             android:minLines="1"
